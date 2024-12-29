@@ -1,0 +1,15 @@
+{# templates/dashboard.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Tableau de bord{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Bienvenue, {{ app.user.nom }} !</h1>
+        <p>Vous êtes connecté en tant que {{ app.user.email }}.</p>
+
+        <a href="{{ path('produit_index') }}" class="btn btn-primary">Voir les produits</a>
+        <a href="{{ path('logout') }}" class="btn btn-danger">Se déconnecter</a>
+    </div>
+{% endblock %}

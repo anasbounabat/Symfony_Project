@@ -1,0 +1,19 @@
+{# templates/security/login.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>Connexion</h1>
+
+        {{ form_start(form) }}
+            {{ form_row(form.email) }}
+            {{ form_row(form.password) }}
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+        {{ form_end(form) }}
+
+        <p>Pas encore de compte ? <a href="{{ path('register') }}">Inscrivez-vous ici</a></p>
+    </div>
+{% endblock %}

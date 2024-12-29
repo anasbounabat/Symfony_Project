@@ -1,0 +1,17 @@
+{# templates/utilisateur/new.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un nouvel utilisateur{% endblock %}
+
+{% block body %}
+    <h1>Créer un nouvel utilisateur</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.nom) }}
+        {{ form_row(form.prenom) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.password) }}
+        <button type="submit" class="btn btn-primary">Enregistrer</button>
+    {{ form_end(form) }}
+{% endblock %}
